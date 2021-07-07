@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecipeFinder.Api</name>
+    </assembly>
+    <members>
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.Get">
+            <summary>
+            Get list of recipe.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.GetById">
+            <summary>
+            Get recipe by id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.Create(RecipeFinder.Application.Commands.CreateRecipe.CreateRecipeCommand)">
+            <summary>
+            Add new recipe
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.Update(System.Guid,RecipeFinder.Api.Requests.UpdateRecipeRequest)">
+            <summary>
+            Updates exist recipe
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.Delete(System.Guid)">
+            <summary>
+            Delete recipe by id
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

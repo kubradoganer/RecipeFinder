@@ -1,0 +1,15 @@
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.deps.json
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.runtimeconfig.json
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.runtimeconfig.dev.json
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.dll
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\ref\RecipeFinder.Domain.dll
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.pdb
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\bin\Debug\net5.0\RecipeFinder.Domain.xml
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.AssemblyInfoInputs.cache
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.AssemblyInfo.cs
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.csproj.CoreCompileInputs.cache
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.dll
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\ref\RecipeFinder.Domain.dll
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.pdb
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.genruntimeconfig.cache

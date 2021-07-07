@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecipeFinder.Application</name>
+    </assembly>
+    <members>
+        <member name="T:RecipeFinder.Application.SeedWork.ICrudRepository`2">
+            <summary>
+            Basic crud repository interface
+            </summary>
+            <typeparam name="TEntity">Type of the entity</typeparam>
+            <typeparam name="TKey">Type of primary key of the entity</typeparam>
+        </member>
+    </members>
+</doc>
