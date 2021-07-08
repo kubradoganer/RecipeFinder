@@ -5,14 +5,36 @@ namespace RecipeFinder.Domain.Entities
 {
     public class Recipe : BaseRootEntity
     {
-        public Recipe(Guid id, string name, int recipeTypeId)
+        private Recipe()
         {
-            Id = id == Guid.Empty ? Guid.NewGuid() : id;
+        }
+
+        private Recipe(string name, int recipeTypeId)
+        {
+            Id = Guid.NewGuid();
             Name = name;
             RecipeTypeId = recipeTypeId;
+            CreatedByUserId = new Guid("AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA");
+            CreatedDate = DateTime.Now;
+            UpdatedByUserId = new Guid("AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA");
+            UpdatedDate = DateTime.Now;
+            RecordStatus = 1;
         }
 
         public string Name { get; private set; }
         public int RecipeTypeId { get; set; }
+
+        public static Recipe Create(string name, int recipeTypeId)
+        {
+            //CheckRule(new AssetSerialNoMustBeUniqueRule(resourceService, assetSerialNoUniquenessCheckerService, serialNo));
+
+            return new Recipe(name, recipeTypeId);
+        }
+
+        public void Update(string name, int recipeTypeId)
+        {
+            Name = name;
+            RecipeTypeId = recipeTypeId;
+        }
     }
 }

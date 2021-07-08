@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RecipeFinder.Api.Requests;
 using RecipeFinder.Application.Commands.CreateRecipe;
+using RecipeFinder.Application.Commands.DeleteRecipe;
+using RecipeFinder.Application.Commands.UpdateRecipe;
+using RecipeFinder.Application.Queries.GetRecipe;
+using RecipeFinder.Application.Queries.GetRecipes;
 using RecipeFinder.Application.Queries.SearchRecipe;
 using RecipeFinder.Domain.Entities;
 using System;
@@ -11,16 +15,18 @@ namespace RecipeFinder.Api.Controllers
 {
     [ApiController]
     [Route("api/recipes")]
-    public class RecipeController : ControllerBase
+    public class RecipeController : BaseApiController
     {
         /// <summary>
         /// Get list of recipe.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IEnumerable<Recipe> Get()
+        public async Task<ActionResult> Get()
         {
-            throw new NotImplementedException();
+            var recipes = await Mediator.Send(new GetRecipesQuery());
+
+            return Ok(recipes);
         }
 
         /// <summary>
@@ -28,9 +34,11 @@ namespace RecipeFinder.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("id")]
-        public IEnumerable<Recipe> GetById()
+        public async Task<ActionResult> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            var recipe = await Mediator.Send(new GetRecipeQuery(id));
+
+            return Ok(recipe);
         }
 
         /// <summary>
@@ -40,7 +48,9 @@ namespace RecipeFinder.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateRecipeCommand command)
         {
-            return Ok();
+            var id = await Mediator.Send(command);
+
+            return CreatedAtAction(nameof(GetById), new { id }, new { id });
         }
 
         /// <summary>
@@ -48,9 +58,18 @@ namespace RecipeFinder.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut("id")]
-        public IEnumerable<Recipe> Update(Guid id, UpdateRecipeRequest request)
+        public async Task<IActionResult> Update(Guid id, UpdateRecipeRequest request)
         {
-            throw new NotImplementedException();
+            var command = new UpdateRecipeCommand()
+            {
+                Id = id,
+                Name = request.Name,
+                RecipeTypeId = request.RecipeTypeId
+            };
+
+            var result = await Mediator.Send(command);
+
+            return Ok(result);
         }
 
         /// <summary>
@@ -58,9 +77,16 @@ namespace RecipeFinder.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpDelete("id")]
-        public IEnumerable<Recipe> Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            throw new NotImplementedException();
+            var command = new DeleteRecipeCommand()
+            {
+                Id = id
+            };
+
+            await Mediator.Send(command);
+
+            return NoContent();
         }
 
         [HttpPost("search")]

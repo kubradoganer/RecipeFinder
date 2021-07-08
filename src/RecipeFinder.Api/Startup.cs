@@ -15,6 +15,7 @@ using RecipeFinder.Infrastructure.Processing;
 using System;
 using System.Reflection;
 using RecipeFinder.Infrastructure.Domain.SeedWork;
+using RecipeFinder.Infrastructure;
 
 namespace RecipeFinder
 {
@@ -60,6 +61,8 @@ namespace RecipeFinder
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            services.AddInfrastructureServices();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -82,7 +85,7 @@ namespace RecipeFinder
 
             app.UseSwaggerWithUI();
 
-            //AutoMigrate(app);
+            AutoMigrate(app);
         }
 
         private void AutoMigrate(IApplicationBuilder app)

@@ -13,3 +13,4 @@ C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.D
 C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\ref\RecipeFinder.Domain.dll
 C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.pdb
 C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.genruntimeconfig.cache
+C:\Research\RecipeFinder\src\RecipeFinder.Domain\obj\Debug\net5.0\RecipeFinder.Domain.csprojAssemblyReference.cache

@@ -10,7 +10,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:RecipeFinder.Api.Controllers.RecipeController.GetById">
+        <member name="M:RecipeFinder.Api.Controllers.RecipeController.GetById(System.Guid)">
             <summary>
             Get recipe by id.
             </summary>
