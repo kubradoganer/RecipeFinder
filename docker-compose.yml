@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  recipefinder.api:
+    image: ${DOCKER_REGISTRY-}recipefinderapi
+    build:
+      context: .
+      dockerfile: src/RecipeFinder.Api/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8000:80"
+
+  postgres:
+    image: postgres
+    container_name: recipefinder.db
+    environment:
+      - POSTGRES_USER=dogankub
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=recipe.finder
+      - ALLOW_IP_RANGE='0.0.0.0/0'
+      - TZ=Asia/Istanbul
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: recipefinder.pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-dogankub@itu.edu.tr}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    ports:
+      - "${PGADMIN_PORT:-5051}:80"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    depends_on:
+      - "postgres"
+
+volumes:
+  postgresdb:
+  pgadmin:

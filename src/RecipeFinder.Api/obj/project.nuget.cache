@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Gm3F3+1weHCiSHzBGN2NP+c9qn5UAmhwkZhJfoyhCrXn+sl2QX3P8GrSkHr5XeAPzGKIgziBdlcl5u50cVIKug==",
+  "dgSpecHash": "pEzHUNNH3u25/RaWqnrpCJY34gm4+0jpLZ1j3nHU3nLN+uwKlyjdE0LVfXya2l2aWIkbWVSNDAUQpyVDaSo4gw==",
   "success": true,
   "projectFilePath": "C:\\Research\\RecipeFinder\\src\\RecipeFinder.Api\\RecipeFinder.Api.csproj",
   "expectedPackageFiles": [
@@ -51,6 +51,7 @@
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\5.0.2\\microsoft.visualstudio.web.codegeneration.5.0.2.nupkg.sha512",
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\5.0.2\\microsoft.visualstudio.web.codegeneration.contracts.5.0.2.nupkg.sha512",
     "C:\\Users\\kubra.er\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\5.0.2\\microsoft.visualstudio.web.codegeneration.core.5.0.2.nupkg.sha512",
