@@ -20,8 +20,7 @@ namespace RecipeFinder.Application.Commands.CreateRecipe
 
         public async Task<Guid> Handle(CreateRecipeCommand command, CancellationToken cancellationToken)
         {
-            Recipe recipe = Recipe.Create(command.Name,
-                                       command.RecipeTypeId);
+            Recipe recipe = Recipe.Create(command.Name, command.RecipeTypeId);
 
             _recipeRepository.Add(recipe);
 

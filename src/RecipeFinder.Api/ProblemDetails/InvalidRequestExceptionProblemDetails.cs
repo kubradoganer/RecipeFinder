@@ -10,7 +10,7 @@ namespace RecipeFinder.Api.ProblemDetails
             Title = "Invalid request validation.";
             Status = StatusCodes.Status400BadRequest;
             Detail = exception.Message;
-            Type = "https://bordatech.com/invalid-request-exception";
+            Type = "https://localhost/invalid-request-exception";
         }
     }
 }

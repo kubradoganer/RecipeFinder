@@ -3,7 +3,6 @@ using RecipeFinder.Domain.Entities;
 
 namespace RecipeFinder.Infrastructure.Database.Contexts
 {
-
     public class RecipeFinderContext : DbContext
     {
         public RecipeFinderContext(DbContextOptions options) : base(options)

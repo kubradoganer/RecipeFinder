@@ -6,9 +6,7 @@ using RecipeFinder.Application.Commands.UpdateRecipe;
 using RecipeFinder.Application.Queries.GetRecipe;
 using RecipeFinder.Application.Queries.GetRecipes;
 using RecipeFinder.Application.Queries.SearchRecipe;
-using RecipeFinder.Domain.Entities;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RecipeFinder.Api.Controllers

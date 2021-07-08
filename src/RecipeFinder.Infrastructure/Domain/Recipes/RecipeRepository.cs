@@ -3,6 +3,7 @@ using RecipeFinder.Domain.Entities;
 using RecipeFinder.Infrastructure.Database.Contexts;
 using RecipeFinder.Infrastructure.SeedWork;
 using System;
+using System.Linq;
 
 namespace RecipeFinder.Infrastructure.Domain.Recipes
 {
@@ -10,6 +11,11 @@ namespace RecipeFinder.Infrastructure.Domain.Recipes
     {
         public RecipeRepository(RecipeFinderContext context) : base(context)
         {
+        }
+
+        public Recipe GetByName(string name)
+        {
+            return GetQueryable().FirstOrDefault(i => i.RecordStatus == 1 && i.Name == name);
         }
     }
 }

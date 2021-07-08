@@ -10,7 +10,7 @@ namespace RecipeFinder.Api.ProblemDetails
             Title = "Business rule validation error";
             Status = StatusCodes.Status400BadRequest;
             Detail = exception.Message;
-            Type = "https://bordatech.com/business-rule-validation-error";
+            Type = "http://localhost/business-rule-validation-error";
         }
     }
 }
