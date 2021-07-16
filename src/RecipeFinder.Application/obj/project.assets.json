@@ -1008,6 +1008,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nexus.bordatechdev.com/repository/nuget/index.json": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://pkgs.dev.azure.com/bordasw/_packaging/nuget-borda/nuget/v3/index.json": {}
       },

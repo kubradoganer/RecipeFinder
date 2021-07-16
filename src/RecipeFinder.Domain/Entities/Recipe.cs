@@ -26,8 +26,6 @@ namespace RecipeFinder.Domain.Entities
 
         public static Recipe Create(string name, int recipeTypeId)
         {
-            //CheckRule(new AssetSerialNoMustBeUniqueRule(resourceService, assetSerialNoUniquenessCheckerService, serialNo));
-
             return new Recipe(name, recipeTypeId);
         }
 

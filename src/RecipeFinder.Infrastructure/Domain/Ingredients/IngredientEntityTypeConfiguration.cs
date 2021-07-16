@@ -6,12 +6,11 @@ namespace RecipeFinder.Infrastructure.Domain.Ingredients
 {
     public class IngredientEntityTypeConfiguration : IEntityTypeConfiguration<Ingredient>
     {
-        internal const string TABLE_INGREDIENT = "Ingredient";
         internal const string TABLE_INGREDIENT_COL_NAME = "Name";
 
         public void Configure(EntityTypeBuilder<Ingredient> builder)
         {
-            builder.ToTable(TABLE_INGREDIENT);
+            builder.ToTable(nameof(Ingredient));
             builder.Property(p => p.Name).HasColumnName(TABLE_INGREDIENT_COL_NAME);
         }
     }

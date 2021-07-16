@@ -1,14 +1,8 @@
-﻿using FluentValidation;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using RecipeFinder.Application.Repositories;
+using RecipeFinder.Infrastructure.Domain.Ingredients;
+using RecipeFinder.Infrastructure.Domain.Measurements;
 using RecipeFinder.Infrastructure.Domain.Recipes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RecipeFinder.Infrastructure
 {
@@ -17,8 +11,8 @@ namespace RecipeFinder.Infrastructure
         public static void AddInfrastructureServices(this IServiceCollection services)
         {
             services.AddScoped<IRecipeRepository, RecipeRepository>();
-
-
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
+            services.AddScoped<IMeasurementRepository, MeasurementRepository>();
         }
     }
 }

@@ -5,12 +5,22 @@ namespace RecipeFinder.Domain.Entities
 {
     public class Measurement : BaseRootEntity
     {
-        public Measurement(Guid id, string name)
+        public Measurement(string name)
         {
-            Id = id == Guid.Empty ? Guid.NewGuid() : id;
+            Id = Guid.NewGuid();
             Name = name;
         }
 
         public string Name { get; private set; }
+
+        public static Measurement Create(string name)
+        {
+            return new Measurement(name);
+        }
+
+        public void Update(string name)
+        {
+            Name = name;
+        }
     }
 }

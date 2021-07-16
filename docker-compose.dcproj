@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>9770c6c1-2e24-42a6-b31c-d4ad081db729</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/weatherforecast</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/help</DockerServiceUrl>
     <DockerServiceName>recipefinder.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

@@ -5,12 +5,22 @@ namespace RecipeFinder.Domain.Entities
 {
     public class Ingredient : BaseRootEntity
     {
-        public Ingredient(Guid id, string name)
+        public Ingredient(string name)
         {
-            Id = id == Guid.Empty ? Guid.NewGuid() : id;
+            Id = Guid.NewGuid();
             Name = name;
         }
 
         public string Name { get; private set; }
+
+        public static Ingredient Create(string name)
+        {
+            return new Ingredient(name);
+        }
+
+        public void Update(string name)
+        {
+            Name = name;
+        }
     }
 }

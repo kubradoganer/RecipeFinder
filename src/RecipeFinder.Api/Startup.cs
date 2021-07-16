@@ -16,6 +16,8 @@ using System;
 using System.Reflection;
 using RecipeFinder.Infrastructure.Domain.SeedWork;
 using RecipeFinder.Infrastructure;
+using RecipeFinder.Application.Exceptions;
+using RecipeFinder.Api.ProblemDetails;
 
 namespace RecipeFinder
 {
@@ -51,18 +53,22 @@ namespace RecipeFinder
                 cfg.AddMaps(AppDomain.CurrentDomain.GetAssemblies());
             }, AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddProblemDetailsFromExceptions();
+            services.AddProblemDetails(opt =>
+            {
+                opt.Map<ItemNotFoundException>(ex => new ItemNotFoundExceptionProblemDetails(ex));
+            });
 
             Assembly[] assemblies = new[] { Assemblies.Application };
 
             services.AddMediatR(assemblies);
+
             AssemblyScanner.FindValidatorsInAssemblies(assemblies).ForEach(item => services.AddScoped(item.InterfaceType, item.ValidatorType));
+
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehaviour<,>));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddInfrastructureServices();
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

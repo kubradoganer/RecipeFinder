@@ -4,6 +4,66 @@
         <name>RecipeFinder.Api</name>
     </assembly>
     <members>
+        <member name="M:RecipeFinder.Api.Controllers.IngredientController.Get">
+            <summary>
+            Get list of ingredient.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.IngredientController.GetById(System.Guid)">
+            <summary>
+            Get ingredient by id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.IngredientController.Create(RecipeFinder.Application.Commands.CreateIngredient.CreateIngredientCommand)">
+            <summary>
+            Add new ingredient
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.IngredientController.Update(System.Guid,RecipeFinder.Api.Requests.UpdateIngredientRequest)">
+            <summary>
+            Updates exist ingredient
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.IngredientController.Delete(System.Guid)">
+            <summary>
+            Delete ingredient by id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.MeasurementController.Get">
+            <summary>
+            Get list of measurement.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.MeasurementController.GetById(System.Guid)">
+            <summary>
+            Get measurement by id.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.MeasurementController.Create(RecipeFinder.Application.Commands.CreateMeasurement.CreateMeasurementCommand)">
+            <summary>
+            Add new measurement
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.MeasurementController.Update(System.Guid,RecipeFinder.Api.Requests.UpdateMeasurementRequest)">
+            <summary>
+            Updates exist measurement
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RecipeFinder.Api.Controllers.MeasurementController.Delete(System.Guid)">
+            <summary>
+            Delete measurement by id
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:RecipeFinder.Api.Controllers.RecipeController.Get">
             <summary>
             Get list of recipe.
